@@ -135,7 +135,7 @@ if {! [string is integer $height]} {
 set result {}
 foreach fn $files {
     set ctnt [quickread $fn]
-    lappend result $ctnt
+    lappend result [string map [list "\r\n" "<NL>" "\n" "<NL>" "\r" "<BEGINNING>"] $ctnt]
 }
 
 drawSpeechBubble $offset [join $result {,}]

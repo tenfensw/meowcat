@@ -37,7 +37,7 @@
      _|  | |  |_
     |____| |___|
 
------
+----
 
 Copyright (C) Tim K/RoverAMD 2019 <timprogrammer@rambler.ru>
 
