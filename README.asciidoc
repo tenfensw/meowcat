@@ -1,0 +1,173 @@
+== meowcat
+
+[source]
+----
+        ______________________
+       |                      |
+       | A tiny CLI tool that |
+       | t will meowify your  |
+       | files!               |
+       |_   __________________|
+         | /
+         |_|
+     |\        /|
+     | \      / |
+     |  \    /  |
+     |   \  /   |
+     |    \/    |
+     |  __  __  |
+     | |  ||  | |
+     | | .||. | |
+     | |__||__| |
+     |    _     |
+     |          |
+     |   \/\/   |
+     |__________|
+     ___|   |____
+    | | _____ |\ \
+    | | |   | | \ \
+    | | |   | |  \ \
+    | | |   | |   \ \
+    |_| |___| |    \_\
+      |       |
+      |  / |  |
+      |  | |  |
+      |  | |  |
+      |  | |  |
+     _|  | |  |_
+    |____| |___|
+
+-----
+
+Copyright (C) Tim K/RoverAMD 2019 <timprogrammer@rambler.ru>
+
+=== What is this?
+
+As you've probably guessed already, this is a replacement for the ``cat`` command-line tool, but all of the file output is meowified, just like in ``cowsay``, but with cats, not cows.
+
+=== Why did I even make this?
+
+Because cats are cute...
+
+=== Installation (Linux and macOS)
+
+Needs Tcl 8.4 or newer to operate and nothing else. On Ubuntu, install Tcl with ``sudo apt-get install tclsh -y``.
+
+[source,bash]
+----
+$ sudo curl -o /usr/local/bin/meowcat http://meow.roveramd.com/meowcat.tcl
+$ sudo chmod 755 /usr/local/bin/meowcat
+----
+
+If you prefer ``meowcat`` over regular ``cat``, create an alias to ``meowcat`` from ``cat``:
+
+[source,bash]
+----
+$ alias cat=meowcat
+----
+
+=== Usage
+
+[source,bash]
+----
+meowcat <additional flags> <files>
+----
+
+Available flags:
+
+[squares]
+- **-u** - draws a happy cat with an UwU face.
+- **-h<rows>** - height of the cat's body in stdout rows. Default value is **6**.
+- **-f<offset>** - offset from the left. Default value is **5**.
+
+You can specify **-** as the input filename to read from stdin.
+
+Examples:
+
+[source,bash]
+----
+$ meowcat -h4 -f2 /etc/mandriva-release
+
+     ______________________
+    |                      |
+    | OpenMandriva Lx rele |
+    | ease 2014.0 (Phospho |
+    | orus) for x86_64     |
+    |_   __________________|
+      | /
+      |_|
+  |\        /|
+  | \      / |
+  |  \    /  |
+  |   \  /   |
+  |    \/    |
+  |  __  __  |
+  | |  ||  | |
+  | | .||. | |
+  | |__||__| |
+  |    _     |
+  |          |
+  |   \/\/   |
+  |__________|
+  ___|   |____
+ | | _____ |\ \
+ | | |   | | \ \
+ | | |   | |  \ \
+ | | |   | |   \ \
+ | | |   | |    \ \
+ |_| |___| |     \_\
+   |       |
+   |  / |  |
+   |  | |  |
+   |  | |  |
+   |  | |  |
+   |  | |  |
+  _|  | |  |_
+ |____| |___|
+
+$ printf '%s' "I've just imagined that I found a huge fish for dinner." | meowcat -u -
+
+        ______________________
+       |                      |
+       | I've just imagined t |
+       | that I found a huge  |
+       | fish for dinner.     |
+       |_   __________________|
+         | /
+         |_|
+     |\        /|
+     | \      / |
+     |  \    /  |
+     |   \  /   |
+     |    \/    |
+     |  __  __  |
+     | |  ||  | |
+     | |/\||/\| |
+     | |__||__| |
+     |    _     |
+     |          |
+     |   \/\/   |
+     |__________|
+     ___|   |____
+    | | _____ |\ \
+    | | |   | | \ \
+    | | |   | |  \ \
+    | | |   | |   \ \
+    | | |   | |    \ \
+    | | |   | |     \ \
+    | | |   | |      \ \
+    |_| |___| |       \_\
+      |       |
+      |  / |  |
+      |  | |  |
+      |  | |  |
+      |  | |  |
+      |  | |  |
+      |  | |  |
+      |  | |  |
+     _|  | |  |_
+    |____| |___|
+----
+
+=== License
+0BSD
